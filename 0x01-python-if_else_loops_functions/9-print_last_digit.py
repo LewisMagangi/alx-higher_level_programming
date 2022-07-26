@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 def print_last_digit(number):
     n = abs(number) % 10
     print(n, end='')
