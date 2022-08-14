@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+
+def remove_char_at(str ="lewis is a good man", n = 6):
+    newstr = str.replace(str[n], "")
+    print(newstr)
+remove_char_at()
