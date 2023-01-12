@@ -5,4 +5,6 @@ def no_c(my_string):
         if x[i] == "c" or x[i] == "C":
             x[i] = ""
 
-    return "".join(x)
+    newstring = "".join(x)
+
+    return newstring
