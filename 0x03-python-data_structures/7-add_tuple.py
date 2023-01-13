@@ -6,10 +6,10 @@ def add_tuple(tuple_a=(), tuple_b=()):
 
     if len(ta) == 0:
         ta = [0, 0]
-    elif len(tb) == 0:
-        tb = [0, 0]
     elif len(ta) == 1:
         ta.append(0)
+    if len(tb) == 0:
+        tb = [0, 0]
     elif len(tb) == 1:
         tb.append(0)
 
