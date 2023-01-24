@@ -55,7 +55,7 @@ class Square:
             print("")
         else:
             for i in range(self.__size):
-                j = ["_" for a in range(self.__position[0])]
+                j = [" " for a in range(self.__position[0])]
                 d = ["#" for c in range(self.__size)]
                 x = j + d
                 print("".join(x))
