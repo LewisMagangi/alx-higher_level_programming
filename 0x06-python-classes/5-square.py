@@ -33,11 +33,11 @@ class Square:
         area = self.__size ** 2
         return area
     """
-    a public instance method that prints in stdout the square with # 
+    a public instance method that prints in stdout the square with #
     """
     def my_print(self):
         if self.__size == 0:
-            print("\n")
+            print(" ")
         else:
             for i in range(self.__size):
                 d = ["#" for c in range(self.__size)]
