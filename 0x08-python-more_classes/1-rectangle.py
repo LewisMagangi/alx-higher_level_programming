@@ -6,7 +6,7 @@ A class that defines a rectangle
 
 class Rectangle:
     """
-    a private instance attribute named width
+    a private instance attribute containing width and height
     """
     def __init__(self, width=0, height=0):
         self.__width = width
