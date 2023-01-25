@@ -63,6 +63,8 @@ class Rectangle:
         d = ["#" for c in range(self.__width)]
         a = "".join(d)
         for i in range(self.__height):
-            x += "\n"
-            x += a
+            if i < self.__height - 1:
+                x += a + "\n"
+            else:
+                x += a
         return x
