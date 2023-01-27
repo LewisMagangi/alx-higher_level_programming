@@ -17,8 +17,9 @@ class Rectangle:
             raise TypeError("weight must be an integer")
         if int(width) < 0:
             raise ValueError("weight must be >= 0")
-        self.__width = width
-        self.__height = height
+        else:
+            self.__width = width
+            self.__height = height
     """
     a private instance method that retrieves the width of a rectangle
     """
