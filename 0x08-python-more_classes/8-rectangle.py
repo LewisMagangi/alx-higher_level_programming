@@ -69,9 +69,8 @@ class Rectangle:
     a public instance method that prints in stdout the rectangle with #
     """
     def __str__(self):
-        j = Rectangle.print_symbol
         x = ""
-        d = [str(j) for c in range(int(self.__width))]
+        d = [str(self.print_symbol) for c in range(int(self.__width))]
         a = "".join(d)
         for i in range(int(self.__height)):
             if self.__height == 0 or self.__width == 0:
@@ -94,3 +93,15 @@ class Rectangle:
     def __del__(self):
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+    """
+    a static method that returns the biggest rectangle based on the area
+    """
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        elif not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        elif rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2
