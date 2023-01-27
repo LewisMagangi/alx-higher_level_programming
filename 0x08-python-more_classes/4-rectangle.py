@@ -71,9 +71,9 @@ class Rectangle:
                 x += a
         return x
     """
-    a public instance method 
+    a public instance method
     """
     def __repr__(self):
-        l = ""
-        l += "Rectangle(" + str(self.__width) + ", " +  str(self.__height) +  ")"
-        return l
+        k = ""
+        k += "Rectangle(" + str(self.__width) + ", " + str(self.__height) + ")"
+        return k
