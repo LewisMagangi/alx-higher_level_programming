@@ -59,13 +59,11 @@ class Rectangle:
     a public instance method that prints in stdout the rectangle with #
     """
     def __str__(self):
-        if self.__height or self.__width == 0:
-            return ""
         x = ""
         d = ["#" for c in range(self.__width)]
         a = "".join(d)
         for i in range(self.__height):
-            if not x and i < self.__height - 1:
+            if i < self.__height - 1:
                 x += a + "\n"
             else:
                 x += a
