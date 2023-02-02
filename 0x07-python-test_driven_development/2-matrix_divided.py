@@ -9,23 +9,27 @@ def matrix_divided(matrix, div):
     a function that divides all elements of a matrix.
     '''
     x = "matrix must be a matrix (list of lists) of integers/floats"
-    new_matrix = [[u for u in f] for f in matrix]
-    if type(new_matrix) != list:
+    new = [[u for u in f] for f in matrix]
+    if type(div) not in [int, float]:
+        raise TypeError("div must be a number")
+    elif div == 0:
+        raise ZeroDivisionError('division by zero')
+    if type(new) != list:
         raise TypeError(x)
-    list_len = len(new_matrix[0])
-    for i in range(len(new_matrix)):
-        if type(new_matrix[i]) is not list:
+    list_len = len(new[0])
+    for i in range(len(new)):
+        if type(new[i]) is not list:
             raise TypeError(x)
-        elif len(new_matrix[i]) != list_len:
+        elif len(new[i]) != list_len:
             raise TypeError("Each row of the matrix must have the same size")
-        for x in range(len(new_matrix[i])):
-            if type(new_matrix[i][x]) not in [int, float]:
+        for x in range(len(new[i])):
+            if type(new[i][x]) not in [int, float]:
                 raise TypeError(x)
-            new_matrix[i][x] /= div
-            new_matrix[i][x] = round(new_matrix[i][x], 2)
+            new[i][x] /= div
+            new[i][x] = round(new[i][x], 2)
 
     if type(div) not in [int, float]:
         raise TypeError("div must be a number")
     elif div == 0:
         raise ZeroDivisionError('division by zero')
-    return new_matrix
+    return new
