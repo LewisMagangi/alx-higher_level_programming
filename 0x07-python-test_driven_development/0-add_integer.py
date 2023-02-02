@@ -9,7 +9,7 @@ def add_integer(a, b=98):
     Returns an integer: the addition of a and b
     '''
     x = [float, int]
-    ta , tb = type(a), type(b) 
+    ta, tb = type(a), type(b)
     if ta not in x:
         raise TypeError("a must be an integer")
     elif tb not in x:
