@@ -12,4 +12,6 @@ class MyList(list):
         """
         A public instance method that prints the list, sorted (ascending sort)
         """
-        print(self.sort())
+        list3 = self[:]
+        list3 = list3.sort()
+        print(list3)

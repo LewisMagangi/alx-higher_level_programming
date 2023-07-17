@@ -10,7 +10,8 @@ class MyList(list):
     """
     def print_sorted(self):
         """
-        A public instance method that prints the list, but sorted (ascending sort)
+        A public instance method that prints the list, sorted (ascending sort)
         """
-        print(self.sort())
-    
+        list3 = self[:]
+        list3.sort()
+        print(list3)
