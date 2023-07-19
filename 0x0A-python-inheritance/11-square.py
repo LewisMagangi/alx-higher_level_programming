@@ -1,68 +1,32 @@
 #!/usr/bin/python3
 """
-This module contains the classes:
-
--BaseGeometry.
--Rectangle.
+This module contains the class Rectangle.
 """
-class BaseGeometry:
-    """
-    Class that defines basic geometries.
-    """
-    def area(self):
-        """
-        Area of a geometry, not implemented by default.
-        """
-        raise Exception("area() is not implemented")
+BaseGeometry = __import__("9-rectangle.py").Rectangle
 
-    def integer_validator(self, name, value):
-        """
-        Function that validates that value is integer.
-        """
-        if type(value) is not int:
-            raise TypeError(name + " must be an integer")
-        if value <= 0:
-            raise ValueError(name + " must be greater than 0")
 
-class Rectangle(BaseGeometry):
+class Square(Rectangle):
     """
-    Class that defines a rectangle.
+    a class Square that inherits from Rectangle (9-rectangle.py). (task based on 10-square.py).
     """
     def __init__(self, width, height):
         """
-        Initializer for the rectangle class.
+        Instantiation with width and height: def __init__(self, width, height):
         """
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
+        self.integer_validator('width', width)
+        self.integer_validator('height', height)
 
     def area(self):
         """
-        Definition of the area of the rectangle.
+        Method to find the area of a rectangle
         """
         return self.__width * self.__height
 
     def __str__(self):
         """
-        Method called when using print()
+        str() should return,
+        the following rectangle description: [Rectangle] <width>/<height>
         """
-        return "[Rectangle] " + str(self.__width) + "/" + str(self.__height)
-
-class Square(Rectangle):
-    """
-    Definition of a square
-    """
-    def __init__(self, size):
-        """
-        Initializer for the square class.
-        """
-        self.integer_validator("size", size)
-        self.__size = size
-        super().__init__(self.__size, self.__size)
-
-    def __str__(self):
-        """
-        Method called when using print()
-        """
-        return "[Square] " + str(self.__size) + "/" + str(self.__size)
+        return f"[Rectangle] {self.__width}/{self.__height}"
