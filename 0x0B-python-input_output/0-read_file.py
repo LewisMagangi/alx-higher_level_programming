@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+File Input Output Module
+"""
+
 
 def read_file(filename=""):
     """
