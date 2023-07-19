@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 """
-This module contains the class BaseGeometry.
+An empty class
 """
+
+
 class BaseGeometry:
     """
-    Class that defines basic geometries.
+    raises an Exception with the message area() is not implemented
     """
     def area(self):
-        """
-        Area of a geometry, not implemented by default.
-        """
         raise Exception("area() is not implemented")
