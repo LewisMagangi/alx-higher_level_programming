@@ -12,10 +12,10 @@ class Square(Rectangle):
     """
     def __init__(self, size):
         """
-        Instantiation with width and height: def __init__(self, width, height):
+        Instantiation with size: def __init__(self, size):
         """
         self.__size = size
-        self.integer_validator('width', size)
+        self.integer_validator('size', size)
 
     def area(self):
         """
