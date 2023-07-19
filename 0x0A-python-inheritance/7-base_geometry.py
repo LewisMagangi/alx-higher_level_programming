@@ -6,14 +6,18 @@ An empty class
 
 class BaseGeometry:
     """
-    raises an Exception with the message area() is not implemented
+    Class that defines basic geometries.
     """
     def area(self):
+        """
+        raises an Exception with the message area() is not implemented
+        """
         raise Exception("area() is not implemented")
-    """
-    public instance method that validates value
-    """
+
     def integer_validator(self, name, value):
+        """
+        public instance method that validates value
+        """
         if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
