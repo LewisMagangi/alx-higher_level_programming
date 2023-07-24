@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 """
-This module contains the function save_to_json_file.
+File Input Output Module
 """
 import json
 
+
 def save_to_json_file(my_obj, filename):
     """
-    Function that saves the json representation of an object in a file.
+    a function that writes an Object
+    to a text file, using a JSON representation:
     """
-    with open(filename, "w", encoding='utf-8') as f:
-        json.dump(my_obj, f)
+    with open(filename, "w") as file:
+        return file.write(json.dumps(my_obj))
