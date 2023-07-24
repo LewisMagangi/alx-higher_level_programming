@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """
-This module contains the function from_json_string.
+File Input Output Module
 """
 import json
 
+
 def from_json_string(my_str):
     """
-    Function that returns the object represented by a json string.
+    a function that returns an object (Python data structure)
+    represented by a JSON string:
     """
     return json.loads(my_str)
