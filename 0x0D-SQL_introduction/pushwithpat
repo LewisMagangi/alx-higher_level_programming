@@ -14,5 +14,5 @@ read commitMessage
 # Commit the changes
 git commit -m "$commitMessage"
 
-# Push to GitHub using the PAT for authentication
-git push "https://$GITHUB_USERNAME:$PAT@github.com/$GITHUB_USERNAME/yourrepo.git"
+# Push to the current repository using the PAT for authentication
+git push origin "https://$GITHUB_USERNAME:$PAT@github.com/$GITHUB_USERNAME/$(basename `git rev-parse --show-toplevel`).git"
