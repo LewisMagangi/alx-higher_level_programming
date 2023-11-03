@@ -5,3 +5,8 @@ BEGIN
     -- Create the database if it doesn't exist
         CREATE DATABASE hbtn_0c_0;
 	END;   
+ELSE
+BEGIN
+    -- Database exists
+    CREATE DATABASE hbtn_0c_0;
+    END;
