@@ -4,3 +4,4 @@ IF NOT EXISTS (SELECT 1 FROM sys.databases WHERE name = 'hbtn_0c_0')
 BEGIN
     -- Create the database if it doesn't exist
         CREATE DATABASE hbtn_0c_0;
+	END;   
