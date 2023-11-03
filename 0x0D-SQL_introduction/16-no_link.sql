@@ -1,6 +1,4 @@
--- Lists all records of the table second_table having a name value.
--- Records are ordered by descending score.
-SELECT `score`, `name`
-FROM `second_table`
-WHERE `name` != ""
-ORDER BY `score` DESC
+-- a script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server.
+SELECT * FROM `second_table`
+IF `name` EXISTS
+ORDER BY score DESC;
