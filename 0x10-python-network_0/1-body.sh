@@ -1,3 +1,4 @@
 #!/bin/bash
 #This is a Bash script that takes in a URL, sends a GET request to the URL, and displays the body of the response
-response=$(curl -s -w "%{http_code}" -o temp.txt "$1") && [[ $(tail -n 1 temp.txt) -eq 200 ]] && cat temp.txt | head -n -1; rm temp.txt
+#echo -n " $curl -s -X GET "$1")"
+curl -s -X GET "$1"
