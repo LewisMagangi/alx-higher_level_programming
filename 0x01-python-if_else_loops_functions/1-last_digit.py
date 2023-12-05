@@ -12,4 +12,4 @@ elif lno != 0 and lno < 6:
     print("Last digit of", number, "is", lno, "and is less than 6 and not 0")
 elif lno != 0 and lno < 0:
     print("Last digit of", number, "is", lno, "and is less than 6 and not 0")
-# YOUR CODE HERE
+# YOUR CODE HERE is an amazing code 
