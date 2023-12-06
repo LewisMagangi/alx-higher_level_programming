@@ -1,10 +1,11 @@
 #!/usr/bin/node
-const number = parseInt(process.argv[2]);
-function fact (n) {
-  if (!n) {
-    return (1);
-  } else {
-    return (n * fact(n - 1));
+function factorial (a) {
+  let result = 1;
+  for (let i = 2; i <= a; i++) {
+    result *= i;
   }
+  console.log(result);
 }
-console.log(fact(number));
+
+// Call the factorial function with the first command line argument
+factorial(process.argv[2]);
