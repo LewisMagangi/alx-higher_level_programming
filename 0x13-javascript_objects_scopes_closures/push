@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 
 # Check if an argument is provided for the file to be pushed
-if [ -z "$1" ]; then
-  echo 'No file specified. Please provide a file to push.'
-  exit 1
+if [ -n "$1" ]; then
+  file_to_push="$1"
+  git add "$file_to_push"
+else
+  echo 'No file specified. Changes will be committed without adding a specific file.'
 fi
-
-file_to_push="$1"
-
-git add "$file_to_push"
 
 echo 'Enter the commit message:'
 read commitMessage
