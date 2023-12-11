@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-# Check if an argument is provided for the file to be pushed
-if [ -n "$1" ]; then
-  file_to_push="$1"
-  git add "$file_to_push"
+# Check if any arguments are provided
+if [ "$#" -eq 0 ]; then
+    git add .
 else
-  echo 'No file specified. Changes will be committed without adding a specific file.'
+    for file in "$@"; do
+	git add "$file"
+    done
 fi
 
 echo 'Enter the commit message:'
