@@ -9,15 +9,7 @@ class Square extends Rectangle {
 
     // Check if size is a positive integer
     if (size > 0) {
-      // If valid, assign values to width and height
-      this.width = size;
-      this.height = size;
-    } else {
-      // If not valid, create an empty object
-      this.width = 0;
-      this.height = 0;
-    }
-  }
+  
 }
 
 // Export the Square class
