@@ -1,0 +1,1 @@
+A repository purposed to learn Webscrapiong by JavaScript.
