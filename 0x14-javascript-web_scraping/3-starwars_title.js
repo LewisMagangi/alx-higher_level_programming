@@ -13,7 +13,7 @@ request(url, (error, response, body) => {
 
   // Parsing the JSON response
   const movieData = JSON.parse(body);
- 
+
   // Printing the title of the movie
   console.log(movieData.title);
 });
