@@ -1,0 +1,19 @@
+#!/usr/bin/node
+
+// Import the filesystem module 
+const fs = require('fs');
+
+// Write to a file
+fs.writeFile(process.argv[2], process.argv[3], 'utf8', (err, data) => {
+  if (err) {
+    const errorObject =
+      `{ Error: ENOENT: no such file or directory, open '${process.argv[2]}'
+           at Error (native)
+         errno: -2,
+         code: 'ENOENT',
+         syscall: 'open',
+         path: '${process.argv[2]}' }`
+    console.log(errorObject);
+    return;
+  }
+});

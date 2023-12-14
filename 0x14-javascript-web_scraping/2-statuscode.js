@@ -1,12 +1,14 @@
 #!/usr/bin/node
 const request = require('request');
 
+// Get the URL from the command line arguments
 const url = process.argv[2];
 
-request.get(url, (error, response) => {
-  if (!error && response.statusCode === 200) {
-    console.log(`code: ${response.statusCode}`);
+// Perform a GET request
+request(url, (error, response) => {
+  if (error) {
+    console.error(`Error: ${error.message}`);
   } else {
-    console.error(`code: ${response.statusCode}`);
+    console.log(`code: ${response.statusCode}`);
   }
 });
