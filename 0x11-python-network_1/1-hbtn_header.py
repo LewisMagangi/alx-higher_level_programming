@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 import urllib.request
+import sys
 
-url = "https://alx-intranet.hbtn.io/status"
+url = sys.argv[1]
 request = urllib.request.Request(url)
 with urllib.request.urlopen(request) as response:
     html_content = response.read()
