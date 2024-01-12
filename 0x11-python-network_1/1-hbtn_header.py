@@ -6,15 +6,8 @@ the value of the X-Request-Id variable found in the header of the response.
 import urllib.request
 import sys
 
-# Retrieve the URL from the command line argument
-url = sys.argv[1]
+if __name__ == "__main__":
 
-# Create a Request object with the specified URL
-request = urllib.request.Request(url)
-
-# Use a with statement to open the URL and make the request
-with urllib.request.urlopen(request) as response:
-    # Display the value of X-Request-Id if present
-    x_request_id = response.getheader('X-Request-Id')
-    if x_request_id:
-        print(f"{x_request_id}")
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        value = response.info()
+        print(value['X-Request-Id'])
