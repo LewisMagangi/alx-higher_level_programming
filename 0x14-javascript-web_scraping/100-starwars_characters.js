@@ -9,9 +9,9 @@ request(url, 'utf8', (error, response, body) => {
     for (const characterUrl of JSON.parse(body).characters) {
       request(characterUrl, 'utf8', (error, response, body) => {
         if (error) throw error;
-	else {
-	  console.log(JSON.parse(body).name);
-	}
+        else {
+          console.log(JSON.parse(body).name);
+        }
       });
     }
   }
