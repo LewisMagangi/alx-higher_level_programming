@@ -3,7 +3,6 @@
 a Python script that takes in a URL, sends a request to the URL and displays
 the value of the X-Request-Id variable found in the header of the response.
 """
-
 import urllib.request
 import sys
 
@@ -15,9 +14,6 @@ request = urllib.request.Request(url)
 
 # Use a with statement to open the URL and make the request
 with urllib.request.urlopen(request) as response:
-    html_content = response.read()
-    utf8_content = html_content.decode('utf-8')
-
     # Display the value of X-Request-Id if present
     x_request_id = response.getheader('X-Request-Id')
     if x_request_id:
