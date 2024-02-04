@@ -2,7 +2,6 @@
 """
 Write a Python script that fetches https://alx-intranet.hbtn.io/status
 """
-import sys
 import requests
 
 if __name__ == "__main__":
