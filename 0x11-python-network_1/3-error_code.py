@@ -18,5 +18,5 @@ try:
         html = html_bytes.decode("utf-8")
         print(html)
 
-except Exception as e:
+except urllib.error.HTTPError as e:
     print(f"Error code: {e.code}")
