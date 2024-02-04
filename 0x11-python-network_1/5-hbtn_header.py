@@ -12,7 +12,6 @@ if __name__ == "__main__":
     # Use a with statement to open the URL and make the request
     url = sys.argv[1]
     response = requests.get(url)
-    
     # Check if the request was successful (status code 200)
     if response.status_code == 200:
         headers = response.headers
