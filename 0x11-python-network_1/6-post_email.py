@@ -19,4 +19,4 @@ if __name__ == "__main__":
 
     # Check if the request was successful (status code 200)
     if response.status_code == 200:
-        print("Your email is: {}".format(email))
+        print(response.text)
