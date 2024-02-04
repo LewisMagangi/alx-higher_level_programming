@@ -20,3 +20,6 @@ try:
 
 except urllib.error.HTTPError as e:
     print(f"Error code: {e.code}")
+
+except Exception as e:
+    print(f"Error code: {e.code}")
