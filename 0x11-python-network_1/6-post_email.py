@@ -19,4 +19,4 @@ if __name__ == "__main__":
 
     # Check if the request was successful (status code 200)
     if response.status_code == 200:
-        print(response.text)
+        print(response.content.decode('utf-8'))
