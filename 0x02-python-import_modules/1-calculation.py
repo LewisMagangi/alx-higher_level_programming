@@ -1,1 +1,1 @@
-print("esfui")
+print("checking conf of git")
