@@ -1,1 +1,1 @@
-print("checking conf of git")
+print("checking conf of git if the intended commit is pushed to the intended user")
